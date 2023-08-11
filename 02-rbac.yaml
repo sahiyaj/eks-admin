@@ -3,7 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: roboshop
-  name: roboshop-admin-role
+  name: project-admin-role
 rules:
   - apiGroups: ["*"] 
     resources: ["*"]
@@ -12,15 +12,15 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: roboshop-admin-rolebinding
+  name: project-admin-rolebinding
   namespace: roboshop
 subjects:
 - kind: User
-  name: roboshop-admin
+  name: project-admin
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: roboshop-admin-role
+  name: project-admin-role
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -39,7 +39,7 @@ metadata:
   name: cluster-reader-role-binding
 subjects:
 - kind: User
-  name: roboshop-admin # Name is case sensitive
+  name: project-admin # Name is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole

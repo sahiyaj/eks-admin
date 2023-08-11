@@ -4,15 +4,15 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::464117734641:role/eksctl-eks-cluster-nodegroup-eks-NodeInstanceRole-14WRI0FCYX05A
+      rolearn: arn:aws:iam::464117734641:role/eksctl-eks-cluster-nodegroup-eks-NodeInstanceRole-1R3GHH2DQ28A6
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::464117734641:user/project-admin
+    - usersarn: arn:aws:iam::464117734641:user/project-admin
       username: project-admin
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-08-11T10:11:32Z"
+  creationTimestamp: "2023-08-11T16:21:30Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1254"
-  uid: c25be557-9a44-48b4-b55a-89a42766fa94
+  resourceVersion: "1112"
+  uid: da6f41da-ae5b-42be-8421-75834bf76df2

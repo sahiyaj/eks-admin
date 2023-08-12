@@ -5,10 +5,7 @@ data:
       - system:bootstrappers
       - system:nodes
       rolearn: arn:aws:iam::464117734641:role/eksctl-eks-cluster-nodegroup-eks-NodeInstanceRole-1R749NVSCNE2T
-      username: system:node:{{EC2PrivateDNSName}}
-  mapUsers: |
-    - usersarn: arn:aws:iam::464117734641:user/roboshop-admin
-      username: roboshop-admin    
+      username: system:node:{{EC2PrivateDNSName}}  
 kind: ConfigMap
 metadata:
   creationTimestamp: "2023-08-11T18:13:00Z"

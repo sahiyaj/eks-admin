@@ -4,15 +4,15 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::464117734641:role/eksctl-cluster123-nodegroup-clust-NodeInstanceRole-1XYYMEHN99GZM
+      rolearn: arn:aws:iam::464117734641:role/eksctl-cluster123-nodegroup-clust-NodeInstanceRole-T0CU2FBIOY2J
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - usersarn: arn:aws:iam::464117734641:user/roboshop-admin
-      username: roboshop-admin    
+    - usersarn: arn:aws:iam::464117734641:user/robo-advanced
+      username: robo-advanced    
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-08-16T13:26:12Z"
+  creationTimestamp: "2023-08-18T07:55:12Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1081"
-  uid: c57968d7-9915-4221-afde-c6653c43a9bf
+  resourceVersion: "1023"
+  uid: df32f72c-23d7-43da-ab81-7909566fb031

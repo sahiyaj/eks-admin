@@ -16,7 +16,7 @@ metadata:
   namespace: roboshop
 subjects:
 - kind: User
-  name: roboshop-admin
+  name: robo-advanced
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
@@ -39,7 +39,7 @@ metadata:
   name: cluster-reader-role-binding
 subjects:
 - kind: User
-  name: roboshop-admin # Name is case sensitive
+  name: robo-advanced # Name is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole

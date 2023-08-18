@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::464117734641:role/eksctl-cluster123-nodegroup-clust-NodeInstanceRole-152I51ERCTZ6I
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - usersarn: arn:aws:iam::464117734641:user/robo-advanced
+      username: robo-advanced    
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-08-18T17:19:23Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1403"
+  uid: d661fa13-4407-42bc-bd6a-a5d777d14475
